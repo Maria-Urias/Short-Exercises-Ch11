@@ -67,10 +67,13 @@
                 font-weight: bold;
             }
             td.years::before,
-            tfoot td.total::before {
+            tfoot td.total-value::before {
                 content: attr(data-label);
                 display: block;
                 font-weight: bold;
+            }
+            tfoot td.total-label {
+                display: none;
             }
         }
     </style>
@@ -142,8 +145,8 @@
     </tbody>
     <tfoot>
         <tr>
-            <td class="total" colspan="3" data-label="Total Years of Service:">Total Years of Service</td>
-            <td>105</td>
+            <td class="total-label" colspan="3">Total Years of Service</td>
+            <td class="total-value" data-label="Total Years of Service:">105</td>
         </tr>
     </tfoot>
 </table>
