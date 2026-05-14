@@ -46,12 +46,22 @@
         }
 
         @media only screen and (max-width: 640px) {
+            body {
+                width: 95%;
+            }
+            table,
+            tbody,
+            tfoot,
+            tr,
+            td {
+                display: block;
+                width: 100%;
+            }
             thead {
                 display: none;
             }
-            table, tbody, tr, th, td, tfoot {
-                display: block;
-                width: 100%;
+            table {
+                border: none;
             }
             tr {
                 margin-bottom: 1em;
@@ -60,19 +70,22 @@
                 border: none;
                 padding: .2em 0;
                 text-align: left !important;
+                background-color: white !important;
             }
-            .dept,
-            tfoot td {
+            td.blank {
+                display: none;
+            }
+            td.dept {
                 margin-top: .75em;
                 font-weight: bold;
             }
             td.years::before,
-            tfoot td.total-value::before {
+            td.total-value::before {
                 content: attr(data-label);
                 display: block;
                 font-weight: bold;
             }
-            tfoot td.total-label {
+            td.total-label {
                 display: none;
             }
         }
@@ -95,19 +108,19 @@
             <td class="dept" colspan="4">Editorial</td>
         </tr>
         <tr>
-            <td></td>
+            <td class="blank"></td>
             <td>Joel Murach</td>
             <td>joelmurach@yahoo.com</td>
             <td class="years" data-label="Years of Service:">22</td>
         </tr>
         <tr>
-            <td></td>
+            <td class="blank"></td>
             <td>Anne Boehm</td>
             <td>anne@murach.com</td>
             <td class="years" data-label="Years of Service:">34</td>
         </tr>
         <tr>
-            <td></td>
+            <td class="blank"></td>
             <td>Zak Ruvalcaba</td>
             <td>zak@modulemedia.com</td>
             <td class="years" data-label="Years of Service:">4</td>
@@ -116,13 +129,13 @@
             <td class="dept" colspan="4">Marketing</td>
         </tr>
         <tr>
-            <td></td>
+            <td class="blank"></td>
             <td>Judy Taylor</td>
             <td>judy@murach.com</td>
             <td class="years" data-label="Years of Service:">39</td>
         </tr>
         <tr>
-            <td></td>
+            <td class="blank"></td>
             <td>Bethany Lee</td>
             <td>bethany@murach.com</td>
             <td class="years" data-label="Years of Service:">10</td>
@@ -131,13 +144,13 @@
             <td class="dept" colspan="4">Customer Service</td>
         </tr>
         <tr>
-            <td></td>
+            <td class="blank"></td>
             <td>Kelly Slivkoff</td>
             <td>kelly@murach.com</td>
             <td class="years" data-label="Years of Service:">25</td>
         </tr>
         <tr>
-            <td></td>
+            <td class="blank"></td>
             <td>Juliette Baylon</td>
             <td>juliette@murach.com</td>
             <td class="years" data-label="Years of Service:">1</td>
